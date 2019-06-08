@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts/font-awesome.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <button class="new-game"><i class="fa fa-plus"></i>new game</button>
+        <div class="player1 active">
+          <div class="top">
+            <h1 class="player-name">PLAYER 1</h1>
+            <span class="dot"></span>
+          </div>
+          <h1 class="score score-0">43</h1>
+          <div class="current current-0">5</div>
+        </div>
+        <div class="player2">
+          <div class="top">
+            <h1 class="player-name">PLAYER 2</h1>
+            <span class="dot"></span>
+          </div>
+          <h1 class="score score-1">22</h1>
+          <div class="current current-1">7</div>
+        </div>
+        <img src="dice.png" alt="" class="img" />
+
+        <button class="roll-dice">
+          <i class="fa fa-rotate-left"></i>roll-dice
+        </button>
+        <button class="hold-dice"><i class="fa fa-download"></i>hold</button>
+        <input type="number" placeholder="FINAL SCORE" />
+      </div>
+    </div>
+    <audio class="audio" autoplay>
+      <source class="audi" src="dice-sorry.m4a" type="audio/mp4" />
+    </audio>
+    <script src="script.js"></script>
+  </body>
+</html>

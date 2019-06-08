@@ -1,0 +1,213 @@
+@keyframes warning {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes roll {
+  0% {
+    transform: rotateZ(72000deg) rotateX(72000deg) rotateY(72000deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+body {
+  background-color: rgb(204, 13, 13);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 14rem) 1fr;
+  margin: 5rem 0;
+  justify-content: center;
+}
+
+.card {
+  grid-column: 2 / 6;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  box-shadow: 1px 1px 1rem rgb(65, 64, 64);
+  height: 30rem;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+.new-game {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: #777;
+  font-weight: 200;
+  z-index: 10;
+  transition: all 0.5s;
+  background-color: transparent;
+  align-self: flex-start;
+  border: none;
+  padding: 0.5rem;
+  padding-top: 2rem;
+  cursor: pointer;
+}
+
+.new-game:hover {
+  transform: translateX(0.5rem);
+}
+
+.img {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  z-index: 10;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 5rem;
+  cursor: pointer;}
+
+.roll-dice {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: #777;
+  outline: none;
+  font-weight: 200;
+  z-index: 10;
+  background-color: transparent;
+  align-self: center;
+  margin-bottom: 5rem;
+  margin-top: 15rem;
+  border: none;
+  cursor: pointer;
+}
+
+.roll-dice:hover {
+  color: rgb(24, 23, 23);
+}
+
+.hold-dice {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: #777;
+  font-weight: 200;
+  margin-top: 15rem;
+  z-index: 10;
+  background-color: transparent;
+  align-self: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hold-dice:hover {
+  color: rgb(24, 23, 23);
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player1 {
+  grid-column: 1 / 3;
+  padding: 2rem;
+  padding-top: 5rem;
+  grid-row: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s;
+  transform: rotateY(5deg);
+}
+
+.player2 {
+  grid-column: 3 / 5;
+  padding: 2rem;
+  padding-top: 5rem;
+  grid-row: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s;
+}
+
+h1 {
+  font-weight: 100;
+  color: #777;
+}
+
+.active {
+  background-color: rgb(233, 229, 229);
+}
+
+.active .dot {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 1rem;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.active .player-name {
+  color: black;
+  font-weight: 500;
+}
+
+.score {
+  font-size: 5rem;
+  margin-top: 0;
+  font-weight: 100;
+  font-family: serif;
+  color: rgb(247, 83, 83);
+  transition: all 1s;
+}
+
+.current {
+  padding: 2rem 3rem;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: rgb(233, 67, 67);
+  align-self: center;
+}
+
+.worning {
+  animation: warning 0.2s infinite;
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.roll {
+  animation: roll 1.5s;
+}
+
+input {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #777;
+  font-weight: 200;
+  margin-top: 20rem;
+  z-index: 10;
+  width: 10rem;
+  background-color: transparent;
+  align-self: center;
+  justify-self: center;
+  border: none;
+  background-color: #fff;
+}
+
+.fa {
+  color: red;
+  margin-right: 1rem;
+}
